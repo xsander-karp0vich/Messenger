@@ -5,107 +5,109 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main_bg"
-    android:orientation="vertical"
     android:padding="10dp"
+    android:orientation="vertical"
     tools:context=".ui.activity.LoginActivity">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-
-
-        <RelativeLayout
-            android:layout_marginTop="50dp"
-            android:padding="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_width="200sp"
-                android:layout_height="200sp"
-                android:layout_centerInParent="true"
-                android:src="@drawable/telegram" />
-
-
-
-        </RelativeLayout>
+        <ImageView
+            android:id="@+id/imageViewTelegram"
+            android:layout_width="200sp"
+            android:layout_height="200sp"
+            android:src="@drawable/telegram"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/textViewTelegram"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.2" />
 
         <TextView
-            android:layout_gravity="center_horizontal"
+            android:id="@+id/textViewTelegram"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="30sp"
             android:textColor="@color/white"
-            android:text="@string/telegram"/>
+            android:text="@string/telegram"
+            app:layout_constraintTop_toBottomOf="@id/imageViewTelegram"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
 
         <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
             android:inputType="textWebEmailAddress"
             android:textColor="#222222"
-            android:layout_marginTop="40dp"
-            android:id="@+id/editTextEmail"
             android:hint="@string/enter_your_email"
             android:textColorHint="#222222"
             android:padding="15dp"
             android:background="@drawable/edittextbackground"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"/>
+            app:layout_constraintTop_toBottomOf="@id/textViewTelegram"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="40dp"/>
 
         <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
             android:inputType="textWebPassword"
             android:textColor="#222222"
-            android:layout_marginTop="20dp"
-            android:id="@+id/editTextPassword"
             android:hint="@string/enter_your_password"
             android:textColorHint="#222222"
             android:padding="15dp"
             android:background="@drawable/edittextbackground"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"/>
+            app:layout_constraintTop_toBottomOf="@id/editTextEmail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"/>
 
         <Button
             android:id="@+id/buttonLogIn"
-            android:layout_marginTop="50dp"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="60dp"
-            android:backgroundTint="@color/white"
             android:text="@string/log_in"
-            android:background="@drawable/edittextbackground"/>
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/edittextbackground"
+            app:layout_constraintTop_toBottomOf="@id/editTextPassword"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="50dp"/>
 
         <RelativeLayout
-            android:layout_marginTop="10dp"
+            android:id="@+id/relativeLayoutBottom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/buttonLogIn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp">
 
             <TextView
                 android:id="@+id/forgotPasswordTextView"
                 android:textColor="@color/white"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/forgot_password"/>
+                android:text="@string/forgot_password"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"/>
 
             <TextView
                 android:id="@+id/registerTextView"
                 android:textColor="@color/white"
-                android:layout_alignParentRight="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/register"/>
-
-
-
+                android:text="@string/register"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"/>
 
         </RelativeLayout>
 
-
-
-
-
-    </LinearLayout>
-
-
-
-
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
