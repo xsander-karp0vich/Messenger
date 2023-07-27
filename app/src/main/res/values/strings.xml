@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">SIMPLE CHAT</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="telegram">Telegram</string>
+    <string name="forgot_password">Forgot password</string>
+    <string name="register">Register</string>
+    <string name="registration">Registration</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="enter_your_last_name">Enter your last name</string>
+    <string name="how_old_are_you">How old are you?</string>
+    <string name="sign_up">Sign up</string>
+    <string name="reset_password">Reset password</string>
+    <string name="log_in">Log in</string>
+    <string name="forgot_password_quastion">Forgot password?</string>
+    <string name="error_email">Enter your email!</string>
+    <string name="error_password">Enter your password!</string>
+    <string name="log_out">logout</string>
+    <string name="type_your_message">Type your message</string>
+</resources>
